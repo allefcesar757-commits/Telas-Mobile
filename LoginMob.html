@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI Inclusão - Portal de Aprendizagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="mobile-card">
+    <!-- Topo Acessibilidade -->
+    <header class="accessibility-bar">
+      <button class="acc-btn contrast-toggle" title="Alternar Alto Contraste">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Alto Contraste</span>
+      </button>
+      <div class="font-resizer">
+        <button id="btn-font-down" title="Diminuir fonte">A-</button>
+        <span class="sep"></span>
+        <button id="btn-font-up" class="active" title="Aumentar fonte">A+</button>
+      </div>
+      <button class="acc-btn libras-btn" title="Suporte em Libras">
+        <span>🤟 Libras</span>
+      </button>
+    </header>
+
+    <!-- Cabeçalho Principal -->
+    <section class="brand-header">
+      <div class="logo-container">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="logo-text">
+          <h1>SENAI <span>Inclusão</span></h1>
+          <p>TECNOLOGIA E EDUCAÇÃO PARA TODOS</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Acessibilidade / Ilustrativo -->
+    <section class="accessibility-banner">
+      <div class="banner-content">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>Ambiente 100% adaptado e inclusivo</span>
+      </div>
+    </section>
+
+    <!-- Card Principal de Login -->
+    <section class="login-container">
+      <div class="portal-badge">
+        <span class="status-dot"></span>
+        <span>PORTAL DO ALUNO</span>
+      </div>
+
+      <!-- Abas de Navegação -->
+      <div class="tabs">
+        <button type="button" class="tab-btn active" data-tab="login">Entrar</button>
+        <button type="button" class="tab-btn" data-tab="cadastro">Primeiro Acesso</button>
+      </div>
+
+      <!-- Formulário -->
+      <form class="auth-form" id="login-form">
+        <div class="form-group">
+          <label for="identificador">CPF ou E-mail institucional</label>
+          <div class="input-field">
+            <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <input type="text" id="identificador" placeholder="000.000.000-00 ou nome@aluno.senai.br" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Sua Senha</label>
+          <div class="input-field">
+            <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input type="password" id="senha" placeholder="••••••••" required>
+            <button type="button" class="eye-toggle" title="Mostrar/ocultar senha">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            <span class="label-text">Manter conectado</span>
+          </label>
+          <a href="#" class="link-forgot" id="forgot-link">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <span id="btn-text">Acessar Plataforma</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <!-- Rodapé de Acessibilidade/Suporte -->
+      <footer class="login-footer">
+        <div class="security-info">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00C49F" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Ambiente seguro com recursos de acessibilidade ativados</span>
+        </div>
+
+        <div class="support-action">
+          <a href="#" id="support-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Precisa de suporte acessível? <strong>Clique aqui</strong>
+          </a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
